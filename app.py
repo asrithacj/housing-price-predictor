@@ -71,6 +71,9 @@ if st.button("Predict"):
 
 
     st.subheader("📌 Prediction Results")
+    # Future Price Calculation
+price_future = predicted_price * 1.35   # (Assuming 35% growth in 5 years)
+
     st.write(f"**Future Price in 5 Years:** ₹ {price_future:.2f} Lakhs")
 
     if invest_pred == 1:
