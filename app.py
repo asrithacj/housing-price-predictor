@@ -70,9 +70,9 @@ if st.button("Predict"):
     invest_pred = clf.predict(df)[0]
     st.subheader("📌 Prediction Results")
 
-    # Future Price Calculation (Assuming 35% growth)
-    price_future = predicted_price * 1.35
-    st.write(f"**Future Price in 5 Years:** ₹ {price_future:.2f} Lakhs")
+ # Regression model not used because regressor.pkl was not uploaded
+st.write("Future price prediction disabled (model file missing).")
+
 
     if invest_pred == 1:
         st.success("✔ Recommended as Good Investment")
@@ -120,5 +120,6 @@ ax2.bar(facilities, values, color=["blue", "green"])
 ax2.set_ylabel("Count")
 ax2.set_title("Nearby Schools & Hospitals")
 st.pyplot(fig2)
+
 
 
