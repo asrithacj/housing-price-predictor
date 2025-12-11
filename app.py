@@ -5,7 +5,6 @@ import numpy as np
 
 # Load models
 clf = pickle.load(open("models/classifier.pkl", "rb"))
-reg = pickle.load(open("models/regressor.pkl", "rb"))
 
 st.title("🏡 India Housing Price Prediction Dashboard")
 st.write("Enter the property details below:")
@@ -68,7 +67,7 @@ for col in df.columns:
 # -------------------------
 if st.button("Predict"):
     invest_pred = clf.predict(df)[0]
-    price_future = reg.predict(df)[0]
+
 
     st.subheader("📌 Prediction Results")
     st.write(f"**Future Price in 5 Years:** ₹ {price_future:.2f} Lakhs")
