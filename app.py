@@ -4,7 +4,8 @@ import pickle
 import numpy as np
 
 # Load models
-clf = pickle.load(open("models/classifier.pkl", "rb"))
+clf = pickle.load(open("classifier.pkl", "rb"))
+
 reg = pickle.load(open("models/regressor.pkl", "rb"))
 
 st.title("🏡 India Housing Price Prediction Dashboard")
