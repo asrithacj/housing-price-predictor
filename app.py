@@ -3,8 +3,9 @@ import pandas as pd
 import pickle
 import numpy as np
 
-# Load models
-clf = pickle.load(open("models/classifier.pkl", "rb"))
+# Load model
+clf = pickle.load(open("classifier.pkl", "rb"))
+
 
 st.title("🏡 India Housing Price Prediction Dashboard")
 st.write("Enter the property details below:")
