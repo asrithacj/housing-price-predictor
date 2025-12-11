@@ -113,4 +113,3 @@ ax2.bar(facilities, values, color=["blue", "green"])
 ax2.set_ylabel("Count")
 ax2.set_title("Nearby Schools & Hospitals")
 st.pyplot(fig2)
-
