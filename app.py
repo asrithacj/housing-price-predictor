@@ -68,20 +68,24 @@ for col in df.columns:
 # -------------------------
 if st.button("Predict"):
     invest_pred = clf.predict(df)[0]
-
-
     st.subheader("📌 Prediction Results")
-    # Future Price Calculation
-price_future = predicted_price * 1.35   # (Assuming 35% growth in 5 years)
- st.write(f"**Future Price in 5 Years:** ₹ {price_future:.2f} Lakhs")
+
+    # Future Price Calculation (Assuming 35% growth)
+    price_future = predicted_price * 1.35
+    st.write(f"**Future Price in 5 Years:** ₹ {price_future:.2f} Lakhs")
 
     if invest_pred == 1:
         st.success("✔ Recommended as Good Investment")
     else:
         st.error("❌ Not Recommended as Good Investment")
 
+
+import streamlit as st
+import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import pickle
+
 
 # -------------------------
 # FUTURE PRICE GROWTH GRAPH
@@ -116,4 +120,5 @@ ax2.bar(facilities, values, color=["blue", "green"])
 ax2.set_ylabel("Count")
 ax2.set_title("Nearby Schools & Hospitals")
 st.pyplot(fig2)
+
 
